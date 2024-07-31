@@ -1,0 +1,38 @@
+<div class="container py-5 product-list text-center">
+  <h1>Product List</h1>
+  <button (click)="addProduct()" class="btn btn-primary mt-4 mb-5">
+    Add Product
+  </button>
+  <table class="table table-gray table-striped">
+    <thead>
+      <tr>
+        <th>#</th>
+        <th>Name</th>
+        <th>Description</th>
+        <th>Price</th>
+        <th>Quantity</th>
+        <th>Actions</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let product of products">
+        <td>{{ product.id }}</td>
+        <td>{{ product.name }}</td>
+        <td>{{ product.description }}</td>
+        <td>{{ product.price }}</td>
+        <td>{{ product.quantity }}</td>
+        <td>
+          <button
+            class="btn btn-outline-success mx-3"
+            (click)="editProduct(product.id)"
+          >
+            Edit
+          </button>
+          <button class="btn btn-outline-danger" (click)="deleteProduct(product.id)">
+            Delete
+          </button>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</div>

@@ -1,0 +1,43 @@
+/* footer */
+
+.bfooter {
+  padding: 50px 30px;
+  background-color: #ffc400;
+}
+
+.content .btn button {
+  background-color: #1b1b1b;
+  color: white;
+  padding: 20px 25px;
+  border-radius: 5px;
+  margin-top: 20px;
+}
+
+.footer {
+  padding-top: 60px;
+  padding-bottom: 60px;
+  background-color: #1b1b1b;
+  color: rgb(193, 193, 193);
+}
+
+.col span {
+  display: flex;
+  margin-top: 20px;
+}
+
+.col span p {
+  margin-left: 15px;
+  margin-top: -6px;
+}
+
+.last-logo {
+  padding: 40px 0;
+  background-color: #151515;
+  color: gray;
+}
+
+@media (max-width: 768px) {
+  body {
+    text-align: center;
+  }
+}

@@ -1,0 +1,63 @@
+<div class="container product-form">
+  <h1 class="text-center mt-5 mb-5">
+    {{ productId ? "Edit Product" : "Add Product" }}
+  </h1>
+  <form class="form-group" [formGroup]="productForm" (ngSubmit)="onSubmit()">
+    <div>
+      <input
+        type="text"
+        class="form-control my-3"
+        name="name"
+        placeholder="Enter user Name"
+        formControlName="name"
+      />
+      <!-- <div *ngIf="productForm.get('name')?.invalid && productForm.get('name')?.touched">
+        <small *ngIf="productForm.get('name')?.errors?.required">Name is required.</small>
+        <small *ngIf="productForm.get('name')?.errors?.minlength">Name must be at least 3 characters long.</small>
+      </div> -->
+    </div>
+
+    <div>
+      <input
+        type="text"
+        class="form-control my-3"
+        name="description"
+        placeholder="Enter Product Description"
+        formControlName="description"
+      />
+      <!-- <div *ngIf="productForm.get('description')?.invalid && productForm.get('description')?.touched">
+        <small *ngIf="productForm.get('description')?.errors?.required">Description is required.</small>
+      </div> -->
+    </div>
+
+    <div>
+      <input
+        class="form-control my-3"
+        type="number"
+        placeholder="Enter Product Price"
+        formControlName="price"
+      />
+      <!-- <div *ngIf="productForm.get('price')?.invalid && productForm.get('price')?.touched">
+        <small *ngIf="productForm.get('price')?.errors?.required">Price is required.</small>
+        <small *ngIf="productForm.get('price')?.errors?.min">Price cannot be negative.</small>
+      </div> -->
+    </div>
+
+    <div>
+      <input
+        class="form-control my-3"
+        type="number"
+        placeholder="Enter Product Quantity"
+        formControlName="quantity"
+      />
+      <!-- <div *ngIf="productForm.get('quantity')?.invalid && productForm.get('quantity')?.touched">
+        <small *ngIf="productForm.get('quantity')?.errors?.required">Quantity is required.</small>
+        <small *ngIf="productForm.get('quantity')?.errors?.min">Quantity cannot be negative.</small>
+      </div> -->
+    </div>
+
+    <button type="submit" class="btn btn-primary center mt-5 mb-5">
+      {{ productId ? "Update Product" : "Add Product" }}
+    </button>
+  </form>
+</div>
